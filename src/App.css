@@ -1,0 +1,12 @@
+.App{
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #051421, #042727);
+  position: relative;
+  overflow: hidden;
+}
+.App > .footer{
+  color: white;
+  z-index: 2;
+}
