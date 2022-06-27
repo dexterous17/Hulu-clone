@@ -4,8 +4,10 @@ import './VideoCard.css'
 function VideoCard(props) {
     return (
         <div className='VideoCard'>
-        <h1>Hello</h1>
             <img/>
+            <p></p>
+            <h2></h2>
+            <p></p>
         </div>
     );
 }
