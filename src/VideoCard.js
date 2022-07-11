@@ -1,14 +1,15 @@
-import React from 'react';
+import React , {forwardRef} from 'react';
 import TextTruncate from 'react-text-truncate';
 import './VideoCard.css'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
-function VideoCard({movies}) {
+const base_url = "https://image.tmdb.org/t/p/original";
 
-    const base_url = "https://image.tmdb.org/t/p/original";
+const VideoCard = forwardRef(({movies},ref) => {
+
 
     return (
-        <div className='videoCard'>
+        <div className='videoCard' ref={ref}>
             <img src={`${base_url}${movies.backdrop_path || movies.poster_path}`} alt="Movie Poster"/>
             <TextTruncate
                 line={1}
@@ -20,6 +21,6 @@ function VideoCard({movies}) {
             <p><ThumbUpIcon/>  {movies.vote_count}</p>
         </div>
     );
-}
+})
 
 export default VideoCard;
